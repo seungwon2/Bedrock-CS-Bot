@@ -1,6 +1,8 @@
 #!/usr/bin/env node
-import * as cdk from 'aws-cdk-lib';
-import { CsDemoStack } from '../lib/cs_demo-stack';
+import * as cdk from "aws-cdk-lib";
+import { BedrockCsDemoStack } from "../lib/bedrock-backend-stack";
+import { UserInterfaceStack } from "../lib/user-interfacte-stack";
 
 const app = new cdk.App();
-new CsDemoStack(app, 'CsDemoStack');
+new BedrockCsDemoStack(app, "BedrockCsDemoStack");
+new UserInterfaceStack(app, "UserInterfaceStack");
